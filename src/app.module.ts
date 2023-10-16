@@ -8,7 +8,7 @@ import { GeoModule } from './geo/geo.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '.env',
+      envFilePath: ['.env', '.env.local'],
       isGlobal: true,
     }),
     MongooseModule.forRoot(process.env.DB_URI),
